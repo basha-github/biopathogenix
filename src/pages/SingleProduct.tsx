@@ -31,14 +31,14 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchSingleProduct = async () => {
       const response = await fetch(
-        `http://localhost:3000/products/${params.id}`
+        `https://express-bio-path.vercel.app/products/${params.id}`
       );
       const data = await response.json();
       setSingleProduct(data);
     };
 
     const fetchProducts = async () => {
-      const response = await fetch("http://localhost:3000/products");
+      const response = await fetch("https://express-bio-path.vercel.app/products");
       const data = await response.json();
       setProducts(data);
     };
